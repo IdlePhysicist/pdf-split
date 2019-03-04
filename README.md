@@ -14,8 +14,18 @@ The program is essentially a middleman between you and [GhostScript](https://www
 
 ## Usage
 
+- Range of pages:
+
 Args: `<filename> -r <start page>-<end page>`
 
 ```shell
 $ pdfsplit aipy.pdf -r 10-18
+```
+
+- Individual pages:
+
+Args: `<filename> -i <number of pages>`
+
+```shell
+$ pdfsplit aipy.pdf -i 10
 ```
