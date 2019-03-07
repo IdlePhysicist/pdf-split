@@ -14,11 +14,11 @@ else
     brew install gs
 fi
 
-echo 'Symlinking pdfsplit.py to /usr/local/bin/'
-path=$PWD
-chmod +x pdfsplit.py
-cd /usr/local/bin/
-ln -s $path/pdfsplit.py pdfsplit
+#echo 'Symlinking pdfsplit.py to /usr/local/bin/'
+#path=$PWD
+#chmod +x pdfsplit.py
+#cd /usr/local/bin/
+#ln -s $path/pdfsplit.py pdfsplit
 
-echo 'Finished installing & linking'
+echo 'Finished installing'# & linking'
 echo 'Enjoy 😊'
