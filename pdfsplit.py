@@ -10,11 +10,11 @@ parser.add_argument('-i', type=int, default=False, help='Individual pages to new
 args = parser.parse_args()
 
 def gs(input_pdf, first, last):
-    working_dir = os.getcwd().replace(' ', '\ ')
+    #working_dir = os.getcwd().replace(' ', '\ ')
     result = os.system("""gs -q -dQUIET -dBATCH -dNOPAUSE -sstdout=%stderr \
         -sOutputFile={input_pdf}-{Fpage}-{Lpage}.pdf -dFirstPage={Fpage} -dLastPage={Lpage} \
         -sDEVICE=pdfwrite {input_pdf}.pdf 2>/dev/null"""
-        .format(Fpage=first, Lpage=last, input_pdf="/".join([working_dir, input_pdf]) ))
+        .format(Fpage=first, Lpage=last, input_pdf=input_pdf))#"/".join([working_dir, input_pdf]) ))
     if result: print("Something bad might have happened\nCheck file name for spaces\nGhostScript returned: {}".format(result))
 
 def main():
